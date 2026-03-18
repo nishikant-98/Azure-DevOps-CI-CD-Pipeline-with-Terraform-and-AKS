@@ -25,3 +25,5 @@ This project simulates a real-world DevOps workflow:
 ---
 
 ## 🏗️ Architecture Flow
+
+Developer → Git → CI Server → Build/Test → Docker → Registry → QA → Production
