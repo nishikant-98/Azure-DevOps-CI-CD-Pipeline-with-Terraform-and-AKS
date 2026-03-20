@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/your-repo.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'docker build -t devops-app .'
+            }
+        }
+
+        stage('Push') {
+            steps {
+                sh 'docker push yourdockerhub/devops-app'
+            }
+        }
+    }
+}
